@@ -26,8 +26,8 @@
                                 <td>{{ $pengguna['nama_lengkap'] }}</td>
                                 <td>{{ $pengguna['email'] }}</td>
                                 <td>{{ $pengguna['telepon'] }}</td>
-                                <td>{{ $pengguna['kata_sandi'] }}</td>
-                                <td>{{ $pengguna['id_peran'] == 1 ? 'Admin' : 'Pengguna' }}</td>
+                                <td>{{ $pengguna['password'] }}</td>
+                                <td>{{ $pengguna->peran->nama_peran }}</td>
                                 <td>{{ $pengguna['tanggal_dibuat'] }}</td>
                             </tr>
                         @endforeach

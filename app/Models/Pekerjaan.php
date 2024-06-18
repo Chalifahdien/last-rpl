@@ -15,12 +15,12 @@ class Pekerjaan extends Model
 
     public function pengguna()
     {
-        return $this->belongsTo(Pengguna::class, 'id_pengguna');
+        return $this->belongsTo(User::class, 'id_pengguna');
     }
 
     public function pengambil()
     {
-        return $this->belongsTo(Pengguna::class, 'id_pengambil');
+        return $this->belongsTo(User::class, 'id_pengambil');
     }
 
     public function status()

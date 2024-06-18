@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Pengguna;
 use App\Models\Pekerjaan;
 use App\Models\StatusPekerjaan;
@@ -22,7 +23,7 @@ class PekerjaanFactory extends Factory
     public function definition()
     {
         return [
-            'id_pengguna' => Pengguna::inRandomOrder()->first()->id_pengguna,
+            'id_pengguna' => User::inRandomOrder()->first()->id_pengguna,
             'id_pengambil' => null,
             'judul' => $this->faker->sentence(),
             'deskripsi' => $this->faker->paragraph(),

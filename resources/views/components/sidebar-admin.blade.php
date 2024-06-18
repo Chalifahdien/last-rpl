@@ -4,7 +4,7 @@
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
         <div class="sidebar-brand-icon rotate-n-15">
             {{-- <i class="fas fa-laugh-wink"></i> --}}
-            <img src="img/tolak.png" alt="Logo Tolak" style="width: 45px">
+            <img src="../img/tolak.png" alt="Logo Tolak" style="width: 45px">
         </div>
         <div class="sidebar-brand-text mx-3">TOLAK</div>
     </a>
@@ -30,7 +30,7 @@
 
 
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item {{ Request::is('request', 'ongoing') ? 'active' : '' }} ">
+    <li class="nav-item {{ Request::is('request', 'ongoing', 'history') ? 'active' : '' }} ">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-folder"></i>
@@ -91,7 +91,7 @@
 
     <!-- Sidebar Message -->
     {{-- <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <img class="sidebar-card-illustration mb-2" src="../img/undraw_rocket.svg" alt="...">
                 <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components,
                     and more!</p>
                 <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to

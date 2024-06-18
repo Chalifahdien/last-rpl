@@ -14,7 +14,7 @@ class PekerjaanPengambil extends Model
 
     public function pengambil()
     {
-        return $this->belongsTo(Pengguna::class, 'id_pengambil');
+        return $this->belongsTo(User::class, 'id_pengambil');
     }
 
     public function pekerjaan()

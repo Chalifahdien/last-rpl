@@ -5,7 +5,7 @@
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
             {{-- <i class="fas fa-laugh-wink"></i> --}}
-            <img src="{{ asset('img/tolak.png') }}" alt="Logo Tolak" style="width: 45px">
+            <img src="../img/tolak.png" alt="Logo Tolak" style="width: 45px">
         </div>
         <div class="sidebar-brand-text mx-3">TOLAK</div>
     </a>

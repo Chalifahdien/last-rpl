@@ -1,0 +1,13 @@
+[90m= [39m[34;4mApp\Models\Pengguna[39;24m {#5035
+    [34mid_pengguna[39m: [35m1[39m,
+    [34mnama_lengkap[39m: "[32mWirda Hasanah[39m",
+    [34memail[39m: "[32mzizi31@example.net[39m",
+    [34mtelepon[39m: "[32m(+62) 26 6212 8043[39m",
+    [34mkata_sandi[39m: "[32m$2y$12$0ZAl4hjKjfMKHYLB9uzOcukBNJy5CuW13dukdqfMFCv0OpoPet5EW[39m",
+    [34mfoto_profil[39m: "[32mhttps://via.placeholder.com/640x480.png/00aa88?text=quia[39m",
+    [34mid_peran[39m: [35m1[39m,
+    [34mtanggal_dibuat[39m: "[32m2024-06-15 19:51:33[39m",
+    [34mcreated_at[39m: "[32m2024-06-15 19:51:39[39m",
+    [34mupdated_at[39m: "[32m2024-06-15 19:51:39[39m",
+  }
+

@@ -39,22 +39,48 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Membuat Akun!</h1>
                             </div>
-                            <form class="user">
-                                <div class="form-group ">
-                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                        placeholder="Nama">
+                            <form class="user" action="/register" method="post">
+                                @csrf
+                                <div class="form-group @error('nama_lengkap') mb-1 @enderror">
+                                    <input type="text" name="nama_lengkap" class="form-control form-control-user  @error('nama_lengkap')is-invalid0 @enderror" id="nama_lengkap"
+                                        placeholder="Nama" required value="{{ old('nama_lengkap') }}">
+                                            @error('nama_lengkap')
+                                            <small class="d-block text-danger text-center mt-1 ">
+                                                {{ $message }}
+                                            </small>
+                                            @enderror
+
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email">
+                                <div class="form-group @error('email') mb-1 @enderror">
+                                    <input type="email" name="email" class="form-control form-control-user @error('email')is-invalid0 @enderror" id="email"
+                                        placeholder="Email" required value="{{ old('email') }}">
+                                            @error('email')
+                                            <small class="d-block text-danger text-center mt-1 ">
+                                                {{ $message }}
+                                            </small>
+                                            @enderror
                                 </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control form-control-user"
-                                        id="exampleInputPassword" placeholder="Password">
+                                <div class="form-group @error('telepon') mb-1 @enderror">
+                                    <input type="number" name="telepon" class="form-control form-control-user @error('telepon')is-invalid0 @enderror" id="telepon"
+                                        placeholder="Telepon" required value="{{ old('telepon') }}">
+                                            @error('telepon')
+                                            <small class="d-block text-danger text-center mt-1 ">
+                                                {{ $message }}
+                                            </small>
+                                            @enderror
                                 </div>
-                                <a href="/login" class="btn btn-primary btn-user btn-block">
+                                <div class="form-group @error('password') mb-1 @enderror">
+                                    <input type="password" name="password" class="form-control form-control-user @error('password')is-invalid0 @enderror"
+                                        id="password" placeholder="Password" required>
+                                            @error('password')
+                                            <small class="d-block text-danger text-center mt-1 ">
+                                                The password field must be at least 8 characters.
+                                            </small>
+                                            @enderror
+                                </div>
+                                <button class="btn btn-primary btn-user btn-block" type="submit">
                                     Daftar
-                                </a>
+                                </button>
                                 <hr>
                                 <a href="/" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Daftar dengan Google

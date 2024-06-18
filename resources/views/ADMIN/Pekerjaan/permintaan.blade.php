@@ -2,7 +2,7 @@
     <x-slot:tittle>{{ $tittle }}</x-slot:tittle>
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Riwayat Pekerjaan</h1>
+    <h1 class="h3 mb-2 text-gray-800">Permintaan</h1>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-body">
@@ -17,14 +17,14 @@
                     </thead>
                     <tbody>
                         @foreach ($pekerjaans as $pekerjaan)
-                            @if ($pekerjaan['id_status'] == 3)
+                            @if ($pekerjaan['id_status'] == 1)
                                 <tr>
                                     <td>
-                                        <div class="card shadow">
+                                        <div class="card card-header-actions">
                                             <div class="card-header py-3">
                                                 <span class="m-0 font-weight-bold text-primary">
                                                     {{ $pekerjaan['judul'] }}
-                                                </span> | <a href="#">By {{ $pekerjaan['id_pengguna'] }}</a>
+                                                </span> | <a href="#">By {{ $pekerjaan->pengguna->nama_lengkap }}</a>
                                             </div>
                                             <div class="card-body">
                                                 {{ $pekerjaan['deskripsi'] }}

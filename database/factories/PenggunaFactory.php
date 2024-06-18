@@ -25,8 +25,14 @@ class PenggunaFactory extends Factory
             'telepon' => $this->faker->phoneNumber(),
             'kata_sandi' => bcrypt('password'),
             'foto_profil' => $this->faker->imageUrl(),
-            'id_peran' => Peran::inRandomOrder()->first()->id_peran,
+            'id_peran' => 2,
             'tanggal_dibuat' => now(),
         ];
+    }
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'id_peran' => 1,
+        ]);
     }
 }
